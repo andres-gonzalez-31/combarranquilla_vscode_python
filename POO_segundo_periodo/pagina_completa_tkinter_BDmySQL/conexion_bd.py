@@ -66,7 +66,7 @@ def eliminar_datos():
 
 # ---------------  funcion consultar datos -------------------------
 
-def consultar_datos()
+def consultar_datos():
     nombre = entry_nombre.get()
     
     if not nombre:
