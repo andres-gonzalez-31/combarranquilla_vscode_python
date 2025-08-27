@@ -7,21 +7,21 @@ def inicio():
     
         return render_template('index.html')
     
-@app.route('/contacto')    
+@app.route('/colombia')    
 def contacto():
     
-        return "¡pagina de contacto "
+        return render_template('colombia.html')
     
-@app.route('/servicio')    
+@app.route('/argentina')    
 def servicio():
     
-        return " luz,agua,gas "
+        return render_template('argentina.html')
 
 
-@app.route('/estudiantes')    
+@app.route('/brasil')    
 def estudiantes():
     
-        return " colegios"
+        return render_template('brasil.html')
 
 @app.route('/cursos')    
 def curso():
