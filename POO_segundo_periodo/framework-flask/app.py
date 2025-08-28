@@ -12,16 +12,16 @@ def contacto():
     
         return render_template('onepiece.html')
     
-@app.route('/argentina')    
+@app.route('/futbol')    
 def servicio():
     
-        return render_template('argentina.html')
+        return render_template('futbol.html')
 
 
-@app.route('/brasil')    
+@app.route('/programacion')    
 def estudiantes():
     
-        return render_template('brasil.html')
+        return render_template('programar.html')
 
 @app.route('/cursos')    
 def curso():

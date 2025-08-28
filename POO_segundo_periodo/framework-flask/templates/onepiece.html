@@ -14,7 +14,7 @@
         <li><a href="#">Mugiwara</a></li>
         <li><a href="#">Grand Line</a></li>
         <li><a href="#">Akuma no Mi</a></li>
-        <li><a href="../templates/index.html">Volver</a></li>
+        <li><a href="{{url_for('inicio')}}">Volver</a></li>
       </ul>
     </nav>
   </header>
@@ -22,7 +22,7 @@
   <!-- MAIN -->
   <main>
     <section class="hero">
-      <img src="https://i.ibb.co/vxjM5Yz/onepiece-banner.jpg" alt="One Piece Banner">
+      <img src="{{url_for('static',filename='img/onopiece.jpeg')}}" alt="One Piece Banner">
       <h1>One Piece</h1>
     </section>
 
