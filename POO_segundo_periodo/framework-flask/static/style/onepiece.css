@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: #004aad; /* Azul One Piece */
+  padding: 15px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #ffd700; /* Dorado */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #004aad, #ffd700);
+  color: white;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* RESUMEN */
+.resumen {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+}
+
+.resumen h2 {
+  color: #d32f2f; /* Rojo */
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}

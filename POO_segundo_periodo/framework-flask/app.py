@@ -7,10 +7,10 @@ def inicio():
     
         return render_template('index.html')
     
-@app.route('/colombia')    
+@app.route('/onepiece')    
 def contacto():
     
-        return render_template('colombia.html')
+        return render_template('onepiece.html')
     
 @app.route('/argentina')    
 def servicio():
