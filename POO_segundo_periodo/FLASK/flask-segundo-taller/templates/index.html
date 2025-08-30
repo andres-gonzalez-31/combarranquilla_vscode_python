@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combarranquilla</title>
+</head>
+<body>
+    <marquee behavior="" direction="">hola mundo</marquee>
+    {%if equipo == "medellin" %}
+    <h1>jugadores de medellin</h1>
+    <ol>
+        <li>james rodriguez</li>
+        <li>messi</li>
+        <li>james rodriguez</li>
+        <li>james rodriguez</li>
+    </ol>
+    
+    {%elif equipo != "medellin" %}
+    
+    <h1>jugadores de tabogo</h1>
+    <ol>
+        <li>falcao radamel</li>
+        <li>falcao radamel</li>
+        <li>falcao radamel</li>
+        <li>falcao radamel</li>
+    </ol>
+    {%endif %}
+</body>
+</html>
