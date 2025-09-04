@@ -200,7 +200,7 @@ def ejercicio8():
         return f"<h2>Gracias {nombre}, recibimos tu mensaje:</h2><p>{mensaje}</p><a href='/ejercicio8'>Volver</a>"
     return """
         <h2>Ejercicio 8: Formulario de Contacto</h2>
-        <form method="POST">
+    <form method="POST">
             Nombre: <input type="text" name="nombre" required><br><br>
             Mensaje:<br><textarea name="mensaje" required></textarea><br><br>
             <button type="submit">Enviar</button>
