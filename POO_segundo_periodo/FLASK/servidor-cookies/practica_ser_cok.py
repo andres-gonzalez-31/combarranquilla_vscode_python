@@ -1,3 +1,5 @@
+#hola mundo como estas buena noches adios goodbye
+
 from flask import Flask, render_template, session, make_response, request
 
 aa= Flask(__name__, template_folder='templates')
@@ -44,7 +46,6 @@ def remove_cookie():
    response = make_response(render_template (template_name_or_list='index.html', message = 'cookie removed.'))
    response.set_cookie(key = 'cookie_name', expires= 0)
    return response
-   
 
 if __name__=='__main__':
     aa.run (host='0.0.0.0',debug=True)
