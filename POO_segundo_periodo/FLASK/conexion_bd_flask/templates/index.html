@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{ url_for('create') }}">➕ Crear producto</a>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+    </tr>
+    {% for p in productos %}
+    <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.precio }}</td>
+        <td>
+            <a href="{{ url_for('edit', id_productos=p.id_productos) }}">✏️ Editar</a> |
+            <a href="{{ url_for('delete', id_productos=p.id_productos) }}" onclick="return confirm('¿Seguro?')">🗑 Eliminar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
