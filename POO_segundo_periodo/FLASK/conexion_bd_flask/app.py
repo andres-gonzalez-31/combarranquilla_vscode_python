@@ -55,7 +55,7 @@ def edit(id_productos):
 
 # Eliminar producto
 @app.route('/delete/<int:id_productos>')
-def delete(id):
+def delete(id_productos):
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute("DELETE FROM productos WHERE id_productos=%s", (id_productos,))
