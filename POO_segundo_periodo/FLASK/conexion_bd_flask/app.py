@@ -45,7 +45,6 @@ def edit(id_productos):
         cursor.close()
         conn.close()
         return redirect(url_for('index'))
-
     cursor.execute("SELECT * FROM productos WHERE id_productos=%s", (id_productos,))
     producto = cursor.fetchone()
     cursor.close()
