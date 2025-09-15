@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Agregar Curso</h2>
+<form method="POST" action="{{ url_for('agregar_curso') }}">
+    Nombre: <input type="text" name="nombre"><br>
+    Descripción: <input type="text" name="descripcion"><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}

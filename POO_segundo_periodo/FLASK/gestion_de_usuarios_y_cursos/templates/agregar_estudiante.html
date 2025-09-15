@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Agregar Estudiante</h2>
+<form method="POST" action="{{ url_for('agregar_estudiante') }}">
+    Nombre: <input type="text" name="nombre"><br>
+    Correo: <input type="email" name="correo"><br>
+    Curso:
+    <select name="curso_id">
+        {% for c in cursos %}
+        <option value="{{ c[0] }}">{{ c[1] }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}

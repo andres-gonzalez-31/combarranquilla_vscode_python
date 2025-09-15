@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Editar Estudiante</h2>
+<form method="POST">
+    Nombre: <input type="text" name="nombre" value="{{ est.nombre }}"><br>
+    Correo: <input type="email" name="correo" value="{{ est.correo }}"><br>
+    Curso:
+    <select name="curso_id">
+        {% for c in cursos %}
+        <option value="{{ c.id }}" {% if c.id==est.curso_id %}selected{% endif %}>{{ c.nombre }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Guardar cambios</button>
+</form>
+{% endblock %}

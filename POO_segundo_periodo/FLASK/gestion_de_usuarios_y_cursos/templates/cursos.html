@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Cursos</title>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+
+    <a href="{{ url_for('agregar_curso') }}">Agregar nuevo curso</a>
+    <br><br>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+        </tr>
+        {% for curso in cursos %}
+        <tr>
+            <td>{{ curso[0] }}</td>
+            <td>{{ curso[1] }}</td>
+            <td>{{ curso[2] }}</td>
+            <td>
+                <a href="{{ url_for('editar_curso', id=curso[0]) }}">Editar</a> |
+                <a href="{{ url_for('eliminar_curso', id=curso[0]) }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
