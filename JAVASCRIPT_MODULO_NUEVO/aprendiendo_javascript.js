@@ -60,11 +60,6 @@ function removerCeros() {
 }
 
 // 10. Transcribir ADN a ARN
-function transcribir() {
-  let mapa = { G: "C", C: "G", T: "A", A: "U" };
-  let adn = prompt("Cadena de ADN:").toUpperCase();
-  alert("ARN: " + adn.split("").map(c => mapa[c] || "").join(""));
-}
 
 // 11. Password
 function password() {
