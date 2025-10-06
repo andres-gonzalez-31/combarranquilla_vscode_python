@@ -88,28 +88,137 @@
 //     let horas = ahora.getHours().toString().padStart(2, '0');
 //     let minutos = ahora.getMinutes().toString().padStart(2, '0');
 //     let segundos = ahora.getSeconds().toString().padStart(2, '0');
-
 //     console.log(`${horas}:${minutos}:${segundos}`);
 //   }, 1000); // se ejecuta cada 1 segundo
 // }
-
 // relojDigital();
 
 
 //8. Haz un reloj digital con setTimeout usando recursividad.
+// function relojConsola() {
+//   const ahora = new Date();
+//   const h = String(ahora.getHours()).padStart(2, '0');
+//   const m = String(ahora.getMinutes()).padStart(2, '0');
+//   const s = String(ahora.getSeconds()).padStart(2, '0');
+//   console.clear();             
+//   console.log(`${h}:${m}:${s}`);
+//   // Llamada recursiva con setTimeout para ejecutar otra vez en ~1s
+//   setTimeout(relojConsola, 1000);
+// }
+// // Inicia el reloj
+// relojConsola();
 
-function relojConsola() {
-  const ahora = new Date();
-  const h = String(ahora.getHours()).padStart(2, '0');
-  const m = String(ahora.getMinutes()).padStart(2, '0');
-  const s = String(ahora.getSeconds()).padStart(2, '0');
 
-  console.clear();             // opcional: limpiar la consola para ver solo la última hora
-  console.log(`${h}:${m}:${s}`);
+// 9 Crea un cronómetro que inicie desde 0 y vaya aumentando cada segundo en consola con setInterval.
 
-  // Llamada recursiva con setTimeout para ejecutar otra vez en ~1s
-  setTimeout(relojConsola, 1000);
-}
+// let segundos = 0;
+// let cronometro = setInterval(() => {
+//   console.log(segundos++);
+// }, 1000);
 
-// Inicia el reloj
-relojConsola();
+
+// 10 Haz que un mensaje parpadee en consola alternando 'ON' y 'OFF' cada 500ms usando setInterval.
+// let estado = true;
+// setInterval(() => {
+//   console.log(estado ? "ON" : "OFF");
+//   estado = !estado;
+// }, 500);
+
+// 11 Usa setInterval para mostrar una tabla de multiplicar del 5, mostrando un resultado nuevo cada 2 segundos.
+// let i = 1;
+// let tabla = setInterval(() => {
+//   console.log(`5 x ${i} = ${5 * i}`);
+//   i++;
+//   if (i > 10) clearInterval(tabla);
+// }, 2000);
+
+// 12 Crea una animación de texto que vaya mostrando las letras de la palabra 'JAVASCRIPT' una por una cada 700ms.
+// let texto = "JAVASCRIPT";
+// let pos = 0;
+// let animacion = setInterval(() => {
+//   console.log(texto[pos]);
+//   pos++;
+//   if (pos >= texto.length) clearInterval(animacion);
+// }, 700);
+
+// 13 Haz que se muestre un chiste diferente de un array de 5 chistes cada 3 segundos con setInterval. 
+// let chistes = [
+//   "¿Qué le dijo un techo a otro? Techo de menos.",
+//   "¿Por qué la computadora fue al médico? Porque tenía un virus.",
+//   "¿Qué le dijo una impresora a otra? ¿Esa hoja es tuya o es una impresión mía?",
+//   "¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.",
+//   "¿Qué hace una abeja en el gimnasio? ¡Zum-ba!"
+// ];
+// let idx = 0;
+// setInterval(() => {
+//   console.log(chistes[idx]);
+//   idx = (idx + 1) % chistes.length;
+// }, 3000);
+
+
+// 14 Usa setTimeout para simular un semáforo: 'Rojo' (3s), 'Verde' (2s), 'Amarillo' (1s), y vuelve a comenzar.
+// function semaforo() {
+//   console.log("Rojo");
+//   setTimeout(() => {
+//     console.log("Verde");
+//     setTimeout(() => {
+//       console.log("Amarillo");
+//       setTimeout(semaforo, 1000);
+//     }, 1000);
+//   }, 2000);
+// }
+// semaforo();
+
+//  15 Crea un programa que detenga un setInterval después de que haya ejecutado 10 repeticiones.
+// let count = 0;
+// let intervalo = setInterval(() => {
+//   console.log("Repetición:", ++count);
+//   if (count === 10) clearInterval(intervalo);
+// }, 1000);
+
+  // 16 Simula un cargador de progreso que muestre en consola: '10%', '20%', ..., '100%' usando setInterval.
+// let progreso = 10;
+// let loader = setInterval(() => {
+//   console.log(progreso + "%");
+//   progreso += 10;
+//   if (progreso > 100) clearInterval(loader);
+// }, 500);
+
+  //  17 Crea una función que use setTimeout para mostrar un recordatorio cada 10 segundos, pero solo 3 veces.
+// let veces = 0;
+// function recordatorio() {
+//   if (veces < 3) {
+//     console.log(" Recordatorio número " + (veces + 1));
+//     veces++;
+//     setTimeout(recordatorio, 10000);
+//   }
+// }
+// recordatorio();
+
+
+    // 18 Haz un programa que muestre los números pares del 2 al 20 con un retardo de 1 segundo entre cada número. 
+// let num = 2;
+// let pares = setInterval(() => {
+//   console.log(num);
+//   num += 2;
+//   if (num > 20) clearInterval(pares);
+// }, 1000);
+
+
+
+    // 19 Usa setInterval para mostrar la fecha completa (día, mes, año, hora, minuto, segundo) cada 5 segundos.
+// setInterval(() => {
+//   let ahora = new Date();
+//   console.log(ahora.toLocaleString()); 
+// }, 5000);
+
+
+    //  20 Combina setTimeout y setInterval para iniciar un cronómetro después de 5 segundos de espera.
+// setTimeout(() => {
+//   let t = 0;
+//   setInterval(() => {
+//     console.log("Cronómetro:", t++);
+//   }, 1000);
+// }, 5000);
+
+  
